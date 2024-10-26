@@ -1,0 +1,114 @@
+/* AnalyticsDashboard.css */
+.analytics-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align all items */
+    margin: 20px; /* Add margin to the dashboard */
+    color: white; /* Set default text color */
+  }
+  
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 20px 0; /* Add space above and below titles */
+    text-align: center; /* Center text */
+  }
+  
+  /* Running Distance Bar styles */
+  .running-distance-bars {
+    width: 100%; /* Make the bars responsive */
+    max-width: 800px; /* Limit max width */
+    margin-bottom: 30px; /* Add space between sections */
+  }
+  
+  .running-distance-bar {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin: 10px 0; /* Space between bars */
+    width: 100%; /* Full width */
+  }
+  
+  .player-name {
+    flex: 1; /* Allow space for the name */
+    font-weight: bold; /* Highlight player name */
+  }
+  
+  .bar {
+    height: 20px; /* Set height for bars */
+    border-radius: 5px; /* Rounded corners */
+    margin: 0 10px; /* Space around bars */
+    transition: width 0.4s ease-in-out; /* Smooth width transition */
+    animation: grow 0.5s ease-in-out; /* Animation for growth */
+  }
+  
+  .distance-value {
+    width: 100px; /* Set a fixed width for values */
+    text-align: right; /* Right align distance values */
+    color: white; /* Adjust color to match the theme */
+  }
+  
+  /* Animation keyframes */
+  @keyframes grow {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%; /* Final width based on the value */
+    }
+  }
+  
+  /* Time in Dead Zone */
+  .time-dead-zone {
+    margin-bottom: 30px; /* Space between sections */
+    text-align: center; /* Center text */
+  }
+  
+  .player-deadzone {
+    display: flex;
+    justify-content: space-between; /* Space between name and time */
+    width: 100%;
+    max-width: 800px; /* Limit max width */
+    margin: 10px 0; /* Space between players */
+  }
+  
+  .deadzone-time {
+    font-size: 18px; /* Adjust font size */
+    color: white; /* Adjust color to match the theme */
+  }
+  
+  /* Zone Map Section */
+  .zone-map {
+    width: 100%;
+    max-width: 800px; /* Limit max width */
+  }
+  
+  .zone-container {
+    display: flex; /* Flex layout for zones */
+    justify-content: space-between; /* Space between players */
+    width: 100%;
+    margin: 20px 0; /* Space above and below zone map */
+  }
+  
+  .zone-player {
+    display: flex;
+    flex-direction: column; /* Stack title and zones */
+    align-items: center; /* Center align */
+  }
+  
+  .zone-values {
+    display: flex;
+    justify-content: space-between; /* Space between zones */
+    width: 100%;
+    margin-top: 5px; /* Space above zones */
+  }
+  
+  /* Styles for individual zones */
+  .zone {
+    height: 20px; /* Set height for zones */
+    border-radius: 5px; /* Rounded corners */
+    color: white; /* Text color for percentage */
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+  }
+  

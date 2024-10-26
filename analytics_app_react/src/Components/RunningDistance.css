@@ -1,0 +1,35 @@
+
+.running-distance-container {
+    padding: 20px;
+    background-color: #000; 
+    border-radius: 8px; 
+    color: #fff;
+  }
+  
+  .running-distance-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .running-distance-bars {
+    display: flex;
+    flex-direction: column;
+    gap:10px; 
+  }
+  
+  .running-distance-bar {
+    display: flex;
+    align-items: center;
+  }
+  
+  .player-name {
+    width: 100px;
+  }
+  
+  .bar {
+    height: 30px;
+    border-radius: 5px;
+    margin-left: 10px; 
+  }
+  
