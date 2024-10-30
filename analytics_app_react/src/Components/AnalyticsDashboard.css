@@ -1,114 +1,254 @@
-/* AnalyticsDashboard.css */
+/* Main container for the analytics dashboard */
 .analytics-dashboard {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center align all items */
-    margin: 20px; /* Add margin to the dashboard */
-    color: white; /* Set default text color */
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  color: white; 
   
-  .section-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin: 20px 0; /* Add space above and below titles */
-    text-align: center; /* Center text */
+}
+
+.running-distance-container{
+  width: 100%; 
+  max-width: 800px; 
+  margin-bottom: 30px; 
+  background-color: #1b1b21;
+  padding: 20px;
+  border-radius: 5px;
+ padding-bottom: 40px;
+}
+/* Section title container with a bottom border */
+.section-title-container {
+  width: 100%;
+  padding: 5px;
+  border-bottom: 1px solid white;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 20px 0; /* Add space above and below titles */
+  text-align: center; /* Center text */
+}
+
+/* Running Distance Bar styles */
+.running-distance-bars {
+  /* width: 100%; 
+  max-width: 800px; 
+  margin-bottom: 30px; */
+}
+
+.running-distance-bar {
+  display: flex;
+  align-items: center; /* Center vertically */
+  margin: 10px 0; /* Space between bars */
+  width: 100%; /* Full width */
+}
+
+.player-name {
+  flex: 1; /* Allow space for the name */
+  font-weight: bold; /* Highlight player name */
+}
+
+.bar {
+  height: 20px;
+  border-radius: 5px; /* Rounded corners */
+  margin: 0 10px; /* Space around bars */
+  transition: width 0.4s ease-in-out; /* Smooth width transition */
+  animation: grow 0.5s ease-in-out; /* Animation for growth */
+}
+
+.distance-value {
+  width: 100px; /* Set a fixed width for values */
+  text-align: right; /* Right align distance values */
+  color: white; /* Adjust color to match the theme */
+}
+
+/* Animation keyframes */
+@keyframes grow {
+  from {
+    width: 0;
   }
-  
-  /* Running Distance Bar styles */
-  .running-distance-bars {
-    width: 100%; /* Make the bars responsive */
-    max-width: 800px; /* Limit max width */
-    margin-bottom: 30px; /* Add space between sections */
+  to {
+    width: 100%; /* Final width based on the value */
   }
-  
-  .running-distance-bar {
-    display: flex;
-    align-items: center; /* Center vertically */
-    margin: 10px 0; /* Space between bars */
-    width: 100%; /* Full width */
-  }
-  
-  .player-name {
-    flex: 1; /* Allow space for the name */
-    font-weight: bold; /* Highlight player name */
-  }
-  
-  .bar {
-    height: 20px; /* Set height for bars */
-    border-radius: 5px; /* Rounded corners */
-    margin: 0 10px; /* Space around bars */
-    transition: width 0.4s ease-in-out; /* Smooth width transition */
-    animation: grow 0.5s ease-in-out; /* Animation for growth */
-  }
-  
-  .distance-value {
-    width: 100px; /* Set a fixed width for values */
-    text-align: right; /* Right align distance values */
-    color: white; /* Adjust color to match the theme */
-  }
-  
-  /* Animation keyframes */
-  @keyframes grow {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%; /* Final width based on the value */
-    }
-  }
-  
-  /* Time in Dead Zone */
-  .time-dead-zone {
-    margin-bottom: 30px; /* Space between sections */
-    text-align: center; /* Center text */
-  }
-  
-  .player-deadzone {
-    display: flex;
-    justify-content: space-between; /* Space between name and time */
-    width: 100%;
-    max-width: 800px; /* Limit max width */
-    margin: 10px 0; /* Space between players */
-  }
-  
-  .deadzone-time {
-    font-size: 18px; /* Adjust font size */
-    color: white; /* Adjust color to match the theme */
-  }
-  
-  /* Zone Map Section */
-  .zone-map {
-    width: 100%;
-    max-width: 800px; /* Limit max width */
-  }
-  
-  .zone-container {
-    display: flex; /* Flex layout for zones */
-    justify-content: space-between; /* Space between players */
-    width: 100%;
-    margin: 20px 0; /* Space above and below zone map */
-  }
-  
-  .zone-player {
-    display: flex;
-    flex-direction: column; /* Stack title and zones */
-    align-items: center; /* Center align */
-  }
-  
-  .zone-values {
-    display: flex;
-    justify-content: space-between; /* Space between zones */
-    width: 100%;
-    margin-top: 5px; /* Space above zones */
-  }
-  
-  /* Styles for individual zones */
-  .zone {
-    height: 20px; /* Set height for zones */
-    border-radius: 5px; /* Rounded corners */
-    color: white; /* Text color for percentage */
-    display: flex;
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-  }
-  
+}
+
+/* Time in Dead Zone section */
+.time-dead-zone {
+  margin-bottom: 30px; /* Space between sections */
+  text-align: center; /* Center text */
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  width: 100%;
+}
+
+.time-dead-zone-container {
+  background-color: #1b1b21;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px; /* Fixed max width to match other sections */
+  width: 100%; /* Full width on smaller screens */
+}
+
+/* .player-deadzone {
+  display: flex;
+  justify-content: space-between; 
+  width: 100%;
+  margin: 10px 0;
+} */
+
+.deadzone-time {
+  font-size: 18px; /* Adjust font size */
+  color: white; /* Adjust color to match the theme */
+}
+
+/* Zone Map Section */
+.zone-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #1b1b21;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px; /* Ensure width consistency with Time in Dead Zone */
+  width: 100%;
+}
+
+.zone-container {
+  display: flex; /* Flex layout for zones */
+  justify-content: space-between; /* Space between players */
+  width: 100%;
+  margin: 20px 0; /* Space above and below zone map */
+}
+
+.zone-player {
+  display: flex;
+  flex-direction: column; /* Stack title and zones */
+  align-items: center; /* Center align */
+}
+
+.zone-values {
+  display: flex;
+  justify-content: space-between; /* Space between zones */
+  width: 100%;
+  margin-top: 5px; /* Space above zones */
+}
+
+/* Styles for individual zones */
+.zone {
+  height: 20px;
+  border-radius: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Center alignment for Heat Map and Zone Map sections */
+.heat-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+  background-color: #1b1b21;
+  padding: 20px;
+  border-radius: 20px;
+  max-width: 800px; /* Consistent width for larger screens */
+  width: 100%;
+}
+
+/* Container for holding 2 images per row */
+.heatmap-image, .zone-map-image {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%; /* 45% width to allow space between */
+  margin: 10px; /* Spacing around images */
+}
+
+.heat-map-container, .zone-map-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  margin-top: 50px;
+}
+
+/* Player Legend */
+.player-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Wrap legend items on smaller screens */
+  margin-top: 50px;
+}
+
+.player-item {
+  display: flex;
+  align-items: center;
+  margin-right: 15px;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.player-color {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+/* Time in Dead Zone section */
+.time-dead-zone {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 30px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+/* Time in Dead Zone section */
+.time-dead-zone {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  margin-bottom: 30px;
+  width: 100%;
+  padding-bottom: 50px;
+}
+
+.time-dead-zone-container {
+  background-color: #1b1b21;
+  padding: 30px; 
+  border-radius: 20px;
+  max-width: 800px; /* Fixed max width to match other sections */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content within the container */
+}
+
+.player-deadzone {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+  max-width: 500px; 
+  /* border: 2px solid blue; */
+  margin: 15px!important; 
+}
+
+.player-name {
+  font-size: 20px; /* Increased font size */
+  font-weight: bold;
+  margin-right: 100px; /* Add space between player name and time */
+}
+
+.deadzone-time {
+  font-size: 20px; /* Increased font size */
+  color: white;
+}
