@@ -1,17 +1,28 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 import "./AnalyticsDashboard.css";
 
 const AnalyticsDashboard = () => {
+  const { videoId } = useParams()
   const [analyitcsData, setAnalyticsData] = useState(null);
   const playerColors = ["#FF6F61", "#6B5B93", "#88B04B", "#F7CAC9"];
  
+  // const fetchData = async () => {
+  //   try {
+  //     const response = await axios.get(
+  //       "http://localhost:5000/api/video-analytics"
+  //     ); 
+  //     setAnalyticsData(response.data.data[0]); 
+  //   } catch (error) {
+  //     console.error("Error fetching data:", error);
+  //   }
+  // };
+
   const fetchData = async () => {
     try {
-      const response = await axios.get(
-        "http://localhost:5000/api/video-analytics"
-      ); 
-      setAnalyticsData(response.data.data[0]); 
+      const response = await axios.get(`http://localhost:5000/api/video-analytics/${videoId}`);
+      setAnalyticsData(response.data.data);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -169,6 +180,7 @@ const AnalyticsDashboard = () => {
       <div key={key} className="heatmap-image">
         <h4 style={{ color: playerColors[index % playerColors.length] }}>{`Player ${key}`}</h4>
         <img
+        className="sm-w-30"
           src={`data:image/png;base64,${base64Data}`}
           alt={`Heatmap for Player ${key}`}
           style={{ width: '100%', height: 'auto' }}

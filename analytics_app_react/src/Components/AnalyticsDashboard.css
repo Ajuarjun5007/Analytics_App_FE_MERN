@@ -14,8 +14,9 @@
   margin-bottom: 30px; 
   background-color: #1b1b21;
   padding: 20px;
-  border-radius: 5px;
+  border-radius: 20px;
  padding-bottom: 40px;
+ border: 2px solid white;
 }
 /* Section title container with a bottom border */
 .section-title-container {
@@ -86,6 +87,7 @@
 
 .time-dead-zone-container {
   background-color: #1b1b21;
+  border: 2px solid white;
   padding: 20px;
   border-radius: 20px;
   max-width: 800px; /* Fixed max width to match other sections */
@@ -110,6 +112,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  border: 2px solid white;
   background-color: #1b1b21;
   padding: 20px;
   border-radius: 20px;
@@ -153,6 +156,7 @@
   flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
+  border: 2px solid white;
   background-color: #1b1b21;
   padding: 20px;
   border-radius: 20px;
@@ -165,12 +169,13 @@
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  width: 45%; /* 45% width to allow space between */
-  margin: 10px; /* Spacing around images */
+  width: 45%; 
+  margin: 10px;
 }
 
 .heat-map-container, .zone-map-container {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
@@ -225,11 +230,11 @@
   background-color: #1b1b21;
   padding: 30px; 
   border-radius: 20px;
-  max-width: 800px; /* Fixed max width to match other sections */
+  max-width: 800px; 
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center content within the container */
+  align-items: center;
 }
 
 .player-deadzone {
@@ -251,4 +256,75 @@
 .deadzone-time {
   font-size: 20px; /* Increased font size */
   color: white;
+}
+
+/* Main container adjustments for smaller screens */
+@media (max-width: 768px) {
+  .analytics-dashboard {
+    margin: 10px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin: 15px 0;
+  }
+
+  .running-distance-container, 
+  .time-dead-zone-container,
+  .zone-map,
+  .heat-map {
+    padding: 15px;
+    max-width: 100%; /* Full width on smaller screens */
+  }
+
+  .player-name {
+    font-size: 18px;
+    margin-right: 50px; /* Reduced space on smaller screens */
+  }
+
+  .deadzone-time {
+    font-size: 18px;
+  }
+
+  /* Adjust player-deadzone margins */
+  .player-deadzone {
+    margin: 10px !important;
+  }
+}
+
+/* Adjust layout for Zone Map and Heat Map containers */
+@media (max-width: 768px) {
+  .zone-map-container,
+  .heat-map-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .zone-map-image,
+  .heatmap-image {
+    width: 45%; 
+    margin: 10px 5px;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .running-distance-bar {
+    flex-direction: row;
+    align-items: flex-start; /* Align text to the left for readability */
+  }
+
+  .distance-value {
+    text-align: left;
+    width: auto; /* Remove fixed width for more flexibility */
+  }
+
+  .player-name {
+    margin-right: 0;
+  }
+
+  .bar {
+    width: 100%; /* Full width for bar on small screens */
+  }
 }

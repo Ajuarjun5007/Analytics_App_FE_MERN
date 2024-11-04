@@ -22,6 +22,7 @@ const VideoTable = () => {
   }, []);
 
   const handleGoToAnalytics = (videoId) => {
+    console.log("videoId",videoId);
     navigate(`/video-analytics-dashboard/${videoId}`);
   };
 
