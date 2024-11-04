@@ -35,7 +35,7 @@ const VideoTable = () => {
             <tr>
               <th scope="col">S.No</th>
               <th scope="col">Camera ID</th>
-              <th scope="col">Video ID</th>
+              <th scope="col">Booking ID</th>
               <th scope="col">Go to Analytics</th>
             </tr>
           </thead>
@@ -44,9 +44,9 @@ const VideoTable = () => {
               <tr key={video._id}>
                 <td>{index + 1}</td>
                 <td>{video?.camera_id}</td>
-                <td>{video._id}</td>
+                <td>{video?.booking_id}</td>
                 <td>
-                  <button className="btn btn-primary" onClick={() => handleGoToAnalytics(video._id)}>
+                  <button className="btn btn-primary" onClick={() => handleGoToAnalytics(video.booking_id)}>
                     Go to Analytics
                   </button>
                 </td>

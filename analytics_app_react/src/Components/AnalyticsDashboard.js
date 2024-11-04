@@ -8,16 +8,6 @@ const AnalyticsDashboard = () => {
   const [analyitcsData, setAnalyticsData] = useState(null);
   const playerColors = ["#FF6F61", "#6B5B93", "#88B04B", "#F7CAC9"];
  
-  // const fetchData = async () => {
-  //   try {
-  //     const response = await axios.get(
-  //       "http://localhost:5000/api/video-analytics"
-  //     ); 
-  //     setAnalyticsData(response.data.data[0]); 
-  //   } catch (error) {
-  //     console.error("Error fetching data:", error);
-  //   }
-  // };
 
   const fetchData = async () => {
     try {
