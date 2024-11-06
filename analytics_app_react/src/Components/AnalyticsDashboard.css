@@ -10,7 +10,7 @@
 
 .running-distance-container{
   margin-top: 30px;
-  width: 40%; 
+  width: 33%; 
   max-width: 800px; 
   margin-bottom: 30px; 
   background-color: #1b1b21;
@@ -36,10 +36,11 @@
 
 
 .running-distance-bar {
-  display: flex;
+  /* display: flex; */
   align-items: center; 
-  margin: 10px 0; 
+  margin: 10px; 
   width: 100%; 
+  padding-right: 10px;
 }
 
 .player-name {
@@ -50,7 +51,8 @@
 .bar {
   height: 20px;
   border-radius: 5px; /* Rounded corners */
-  margin: 0 10px; /* Space around bars */
+  margin:10px; /* Space around bars */
+  max-width: 100%;
   transition: width 0.4s ease-in-out; /* Smooth width transition */
   animation: grow 0.5s ease-in-out; /* Animation for growth */
 }
@@ -203,14 +205,7 @@
 }
 
 /* Time in Dead Zone section */
-.time-dead-zone {
-  display: flex;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-  /* margin-bottom: 30px; */
-  width: 100%;
-  padding-bottom: 50px;
-}
+
 
 /* Time in Dead Zone section */
 .time-dead-zone {
@@ -219,7 +214,7 @@
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
   /* margin-bottom: 30px; */
-  width: 64%;
+  width: 52%;
   padding-bottom: 50px;
 }
 
@@ -330,3 +325,4 @@
     width: 100%; 
   }
 }
+

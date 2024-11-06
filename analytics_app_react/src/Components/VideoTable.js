@@ -10,6 +10,7 @@ const VideoTable = () => {
   const navigate = useNavigate();
 
   const fetchData = async () => {
+    console.log("refresh");
     try {
       const response = await axios.get("http://localhost:5000/api/video-analytics");
       setAnalyticsVideoData(response.data.data);
